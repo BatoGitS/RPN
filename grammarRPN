@@ -1,0 +1,30 @@
+lang ->expr*
+expr -> WHILE while_expr || INIT assign_expr || VAR set_expr
+while_expr -> condition body
+condition -> LPAR log_expr RPAR
+log_expr -> value LOGOP value
+body -> LBRACE body_expr RBRACE
+body_expr -> (assign_expr)*
+assign_expr -> VAR ASSIGN value_expr EOL
+value_expr -> value (OP value)*
+value -> NUM|VAR
+set_expr -> TYPE SET || (ADD || REMOVE || CONTAINS value)
+
+VAR -> [a-zA-Z]+
+NUM -> 0|[1-9][0-9]*
+ASSIGN -> =
+OP -> + | - | * | /
+LOG_OP -> == | < | > | <= | >= | !=
+WHILE -> while?
+INIT -> int?
+TYPE -> type?
+SET -> set?
+ADD -> add?
+REMOVE -> remove?
+CONTAINS -> contains?
+EOL -> ;
+OPEN_BR -> (
+CLOSE_BR -> )
+OPEN_BRACE -> {
+CLOSE_BRACE -> }
+WS -> \t | \r | \n

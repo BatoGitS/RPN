@@ -1,0 +1,27 @@
+int a = 3;
+int b = 8;
+int c = 0;
+
+d type set;
+d add 7;
+d add 7;
+d add 2;
+d contains 3;
+d contains 7;
+
+while (a < b) {
+	a = a+3;
+	b = a - 4;
+	c = 4-a;
+}
+
+w type set;
+w add 78;
+w contains 23;
+w add 23;
+w contains 23;
+w remove 23;
+w contains 23;
+d add 38;
+w add 42;
+w contains 42;
