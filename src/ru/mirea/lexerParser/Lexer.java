@@ -34,7 +34,7 @@ public class Lexer {
         lexemes.add(new Lexeme("LPAR", Pattern.compile("\\(")));
         lexemes.add(new Lexeme("RPAR", Pattern.compile("\\)")));
         lexemes.add(new Lexeme("ASSIGN", Pattern.compile("="), 1));
-        lexemes.add(new Lexeme("LOGOP", Pattern.compile("(==|<|>|<=|>=|!=)"), 2));
+        lexemes.add(new Lexeme("LOGOP", Pattern.compile("(==|<=|>=|<|>|!=)"), 2));
         lexemes.add(new Lexeme("ADDSUB", Pattern.compile("[+-]"), 3));
         lexemes.add(new Lexeme("MULDIV", Pattern.compile("[*/]"), 4));
     }
